@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Animation</title>
+
+    <style>
+
+        #square {
+            margin: 100px auto;
+            width: 600px;
+            height: 500px;
+            position: relative;
+            background-color: #050210;  
+        }
+
+        #circle-0 {
+            margin-top: 85px;
+            left: 135px;           
+            width: 330px;
+            height: 330px;
+            border-radius: 100%;
+            position: absolute;  
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff); 
+            animation-name: circle-0;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+            transform-origin: 50% 50% 0; 
+            filter: blur(30px);
+        }
+
+        #circle-1 {
+            margin-top: 100px;
+            left: 150px;           
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            position: absolute;  
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff); 
+            animation-name: circle-1;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+            transform-origin: 50% 50% 0; 
+        }
+
+        #circle-2 {
+            width: 260px;
+            height: 260px;
+            top: 120px;
+            left: 170px;
+            background-color: rgb(12, 14, 46);
+            border-radius: 100%;
+            position: absolute;
+            filter: contrast(0.9);
+            
+            
+        }
+
+        #circle-3::after {
+                content: '';
+                position: absolute;
+                margin-left: 299px;
+                top: 249px;
+                background-color: rgb(23, 23, 61);
+                border-radius: 100%;
+                width: 2px;
+                height: 2px;
+                animation-name: circle-3;
+                animation-iteration-count: infinite;
+                animation-duration: 1.1s;
+                animation-delay: 0s;
+                animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+                filter: contrast(0.9);
+                
+                
+                 
+            }
+
+             
+
+
+        @keyframes circle-1 { 
+                0% {
+                    transform: rotateZ(0deg);
+                }
+                100% {
+                    transform: rotateZ(360deg);
+                }
+            } 
+            @keyframes circle-0 { 
+                0% {
+                    transform: rotateZ(0deg);
+                }
+                100% {
+                    transform: rotateZ(360deg);
+                }
+            }
+            @keyframes circle-3 {
+                0% {
+                    transform-origin: 50% 50% 0;
+                    width: 2px;
+                    height: 2px;
+                }
+                100% {
+                    transform: scale(130,130);
+                }
+        } 
+        
+        
+       
+
+            
+        
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div id="square">
+        <div id="circle-0"></div>
+        <div id="circle-1"></div>
+        <div id="circle-2"></div>
+        <div id="circle-3"></div>    
+    </div>
+    
+
+</body>
+</html>
